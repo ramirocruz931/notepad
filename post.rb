@@ -14,19 +14,17 @@ class Post
   end
 
   def read_from_console
-
+    #sdf
   end
 
   def to_strings
-
+    #sdfdsf
   end
 
   def save
-    file = File.new(file_path)
+    file = File.new(file_path, 'w:UTF-8') # открываем файл на запись
 
-    for item in to_strings do
-      file.puts(item)
-    end
+    to_strings.each { |string| file.puts(string) }
 
     file.close
   end
